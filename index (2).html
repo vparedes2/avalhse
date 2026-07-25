@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVAL HSE — Cotizador de Seguridad y Salud Laboral | Vaca Muerta</title>
+  <meta name="description" content="Obtén un presupuesto estimado de servicios de Higiene y Seguridad Laboral en 60 segundos. Profesional Matriculado PA 446. Cumplimiento legal garantizado.">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0f1a16;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    :root {
+      --primary: #1a3c34;
+      --secondary: #4a7c59;
+      --accent: #c8a951;
+      --danger: #c0392b;
+      --light: #f4f6f7;
+      --text: #2c3e50;
+      --border: #dce0e6;
+      --success: #27ae60;
+    }
+
+    /* ===== HERO VIDEO ===== */
+    .hero {
+      position: relative;
+      width: 100%;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .hero-video-bg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: 0;
+    }
+    /* PC: video horizontal | Mobile: video vertical */
+    .hero-video-pc { display: none; }
+    .hero-video-mobile { display: block; }
+    @media (min-width: 768px) {
+      .hero-video-pc { display: block; }
+      .hero-video-mobile { display: none; }
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(15,26,22,0.4) 0%,
+        rgba(15,26,22,0.65) 50%,
+        rgba(15,26,22,0.95) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 24px;
+      max-width: 800px;
+      animation: fadeInUp 1s ease;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(192,57,43,0.9);
+      color: white;
+      padding: 8px 18px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 24px;
+      backdrop-filter: blur(10px);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(192,57,43,0.4); }
+      50% { box-shadow: 0 0 0 10px rgba(192,57,43,0); }
+    }
+    .hero h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    }
+    .hero h1 span {
+      color: var(--accent);
+    }
+    .hero-subtitle {
+      font-size: clamp(16px, 2.5vw, 22px);
+      opacity: 0.9;
+      margin-bottom: 32px;
+      line-height: 1.5;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--accent), #a88a3a);
+      color: #1a1a1a;
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(200,169,81,0.4);
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    .hero-cta:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 12px 40px rgba(200,169,81,0.6);
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: bounce 2s infinite;
+      color: rgba(255,255,255,0.6);
+      font-size: 28px;
+    }
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+    .hero-trust {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .hero-trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      opacity: 0.85;
+    }
+    .hero-trust-item .icon {
+      font-size: 20px;
+    }
+
+    /* ===== WIZARD SECTION ===== */
+    .wizard-section {
+      background: linear-gradient(180deg, #0f1a16 0%, #1a2e28 100%);
+      padding: 60px 20px;
+    }
+    .wizard-container {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.4);
+    }
+    .wizard-header {
+      background: linear-gradient(135deg, var(--primary) 0%, #2d5a4e 100%);
+      color: white;
+      padding: 32px 28px;
+      text-align: center;
+      position: relative;
+    }
+    .wizard-header::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+      right: 0;
+      height: 40px;
+      background: white;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+    .wizard-logo {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.9;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .wizard-logo-icon {
+      width: 28px;
+      height: 28px;
+      background: var(--accent);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: #1a1a1a;
+    }
+    .wizard-header h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin: 12px 0 8px;
+    }
+    .wizard-header p {
+      font-size: 15px;
+      opacity: 0.9;
+      margin: 0;
+    }
+    .wizard-body {
+      padding: 32px 28px 28px;
+      color: var(--text);
+    }
+    .progress-bar {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 32px;
+      position: relative;
+    }
+    .progress-bar::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 10%;
+      right: 10%;
+      height: 4px;
+      background: var(--border);
+      border-radius: 2px;
+      z-index: 0;
+    }
+    .progress-fill {
+      position: absolute;
+      top: 14px;
+      left: 10%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      border-radius: 2px;
+      z-index: 1;
+      transition: width 0.5s ease;
+    }
+    .step-dot {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+      color: #999;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    }
+    .step-dot.active {
+      border-color: var(--secondary);
+      background: var(--secondary);
+      color: white;
+      box-shadow: 0 0 0 4px rgba(74, 124, 89, 0.2);
+    }
+    .step-dot.completed {
+      border-color: var(--success);
+      background: var(--success);
+      color: white;
+    }
+    .step-label {
+      position: absolute;
+      top: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      color: #888;
+      white-space: nowrap;
+      font-weight: 500;
+    }
+    .step-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+    .step-content.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .question-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .question-subtitle {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 24px;
+    }
+    .option-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .option-card {
+      border: 2px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background: white;
+      position: relative;
+    }
+    .option-card:hover {
+      border-color: var(--secondary);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(26, 60, 52, 0.1);
+    }
+    .option-card.selected {
+      border-color: var(--secondary);
+      background: rgba(74, 124, 89, 0.05);
+      box-shadow: 0 0 0 3px rgba(74, 124, 89, 0.15);
+    }
+    .option-card.selected::after {
+      content: '✓';
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      width: 24px;
+      height: 24px;
+      background: var(--success);
+      color: white;
+      border-radius: 50%;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+    .option-icon { font-size: 32px; margin-bottom: 8px; }
+    .option-label { font-size: 14px; font-weight: 600; color: var(--text); }
+    .option-desc { font-size: 12px; color: #888; margin-top: 4px; }
+    .range-container { margin-bottom: 24px; }
+    .range-value {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+    .range-value span { font-size: 16px; font-weight: 500; color: #666; }
+    input[type="range"] {
+      width: 100%;
+      height: 8px;
+      border-radius: 4px;
+      background: var(--border);
+      outline: none;
+      -webkit-appearance: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--secondary);
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      border: 3px solid white;
+    }
+    .range-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+      margin-top: 8px;
+    }
+    .checkbox-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      padding: 14px 16px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+      background: white;
+    }
+    .checkbox-item:hover { border-color: var(--secondary); }
+    .checkbox-item input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      margin-right: 12px;
+      accent-color: var(--secondary);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .checkbox-item.selected {
+      border-color: var(--secondary);
+      background: rgba(74, 124, 89, 0.05);
+    }
+    .checkbox-text { font-size: 14px; font-weight: 500; color: var(--text); }
+    .checkbox-desc { font-size: 12px; color: #888; display: block; }
+    .nav-buttons {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+    }
+    .btn {
+      flex: 1;
+      padding: 14px 24px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: inherit;
+    }
+    .btn-secondary {
+      background: var(--light);
+      color: var(--text);
+      border: 2px solid var(--border);
+    }
+    .btn-secondary:hover { background: #e8ecef; }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      color: white;
+      box-shadow: 0 4px 15px rgba(26, 60, 52, 0.3);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(26, 60, 52, 0.4);
+    }
+    .btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+    .btn-full { width: 100%; }
+    .result-card {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+      border: 2px solid var(--border);
+    }
+    .result-badge {
+      display: inline-block;
+      background: var(--danger);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .result-amount {
+      font-size: 42px;
+      font-weight: 800;
+      color: var(--primary);
+      margin: 8px 0;
+    }
+    .result-amount span { font-size: 18px; font-weight: 500; color: #666; }
+    .result-detail {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+    .breakdown-list {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .breakdown-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 14px;
+    }
+    .breakdown-item:last-child { border-bottom: none; }
+    .breakdown-item.total {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--primary);
+      border-top: 2px solid var(--border);
+      margin-top: 8px;
+      padding-top: 12px;
+    }
+    .urgency-box {
+      background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+      border: 2px solid #f39c12;
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .urgency-box .icon { font-size: 24px; flex-shrink: 0; }
+    .urgency-box h4 { margin: 0 0 4px; font-size: 15px; color: #856404; }
+    .urgency-box p { margin: 0; font-size: 13px; color: #856404; }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 2px solid var(--border);
+      border-radius: 10px;
+      font-size: 15px;
+      transition: border-color 0.2s;
+      font-family: inherit;
+      box-sizing: border-box;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+    .trust-badge {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: #666;
+    }
+    .trust-badge .icon { font-size: 18px; }
+    .testimonial {
+      background: white;
+      border-left: 4px solid var(--accent);
+      padding: 16px 20px;
+      border-radius: 0 12px 12px 0;
+      margin-bottom: 20px;
+      font-style: italic;
+      color: #555;
+      font-size: 14px;
+    }
+    .testimonial-author {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--text);
+      margin-top: 8px;
+      font-size: 13px;
+    }
+    .summary-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .tag {
+      background: rgba(74, 124, 89, 0.1);
+      color: var(--secondary);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ===== TRUST / FLYER SECTION ===== */
+    .trust-section {
+      background: #0f1a16;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .trust-section h2 {
+      font-size: 28px;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+    .trust-section p {
+      opacity: 0.7;
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+    .flyer-img {
+      max-width: 900px;
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      background: #0a1210;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .site-footer p {
+      font-size: 14px;
+      opacity: 0.6;
+      margin: 4px 0;
+    }
+    .site-footer .contact-line {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 12px;
+    }
+    .site-footer .contact-line strong { color: var(--accent); }
+
+    @media (max-width: 640px) {
+      .hero-trust { gap: 16px; }
+      .hero-trust-item { font-size: 12px; }
+      .wizard-body { padding: 24px 16px; }
+      .option-grid { grid-template-columns: 1fr 1fr; }
+      .result-amount { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== HERO VIDEO ===== -->
+<section class="hero">
+  <!-- PC: video horizontal 16:9 -->
+  <video class="hero-video-bg hero-video-pc" autoplay muted loop playsinline>
+    <source src="./hero-video-pc.mp4" type="video/mp4">
+  </video>
+  <!-- Mobile: video vertical -->
+  <video class="hero-video-bg hero-video-mobile" autoplay muted loop playsinline>
+    <source src="./hero-video.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-badge">⚠️ 0% de Compliance Detectado</div>
+    <h1>¿Tu empresa cumple con la <span>normativa HSE?</span></h1>
+    <p class="hero-subtitle">
+      Profesional Matriculado PA 446 · Especialista en Vaca Muerta<br>
+      Cotizá tu servicio de Seguridad y Salud Laboral en 60 segundos
+    </p>
+    <a href="#cotizador" class="hero-cta">
+      💰 Cotizar Ahora
+      <span style="font-size: 20px;">↓</span>
+    </a>
+
+    <div class="hero-trust">
+      <div class="hero-trust-item">
+        <span class="icon">🛡️</span>
+        <span>Matrícula PA 446</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="icon">⚡</span>
+        <span>Respuesta en 24hs</span>
+      </div>
+      <div class="hero-trust-item">
+        <span class="icon">🏭</span>
+        <span>Oil & Gas · Industria · Comercios</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">↓</div>
+</section>
+
+<!-- ===== WIZARD ===== -->
+<section class="wizard-section" id="cotizador">
+  <div class="wizard-container">
+    <div class="wizard-header">
+      <div class="wizard-logo">
+        <div class="wizard-logo-icon">✓</div>
+        AVAL HSE
+      </div>
+      <h2>Cotizador de Seguridad y Salud Laboral</h2>
+      <p>Obtén un presupuesto estimado en 60 segundos. Cumplimiento legal garantizado.</p>
+    </div>
+
+    <div class="wizard-body">
+      <!-- Progress -->
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+        <div class="step-dot active" data-step="1">
+          1<span class="step-label">Actividad</span>
+        </div>
+        <div class="step-dot" data-step="2">
+          2<span class="step-label">Personal</span>
+        </div>
+        <div class="step-dot" data-step="3">
+          3<span class="step-label">Servicios</span>
+        </div>
+        <div class="step-dot" data-step="4">
+          4<span class="step-label">Zona</span>
+        </div>
+        <div class="step-dot" data-step="5">
+          5<span class="step-label">Presupuesto</span>
+        </div>
+      </div>
+
+      <!-- Step 1 -->
+      <div class="step-content active" id="step1">
+        <h3 class="question-title">¿Qué tipo de empresa tenés?</h3>
+        <p class="question-subtitle">Seleccioná la actividad principal de tu establecimiento</p>
+        <div class="option-grid">
+          <div class="option-card" data-value="comercio" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🏪</div>
+            <div class="option-label">Comercio</div>
+            <div class="option-desc">Local, retail, mayorista</div>
+          </div>
+          <div class="option-card" data-value="servicios" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🔧</div>
+            <div class="option-label">Servicios</div>
+            <div class="option-desc">Mantenimiento, logística, IT</div>
+          </div>
+          <div class="option-card" data-value="industria" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🏭</div>
+            <div class="option-label">Industria</div>
+            <div class="option-desc">Fabricación, producción</div>
+          </div>
+          <div class="option-card" data-value="construccion" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🏗️</div>
+            <div class="option-label">Construcción</div>
+            <div class="option-desc">Obras, montaje, civil</div>
+          </div>
+          <div class="option-card" data-value="oilgas" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🛢️</div>
+            <div class="option-label">Oil & Gas</div>
+            <div class="option-desc">Hidrocarburos, energía</div>
+          </div>
+          <div class="option-card" data-value="salud" onclick="selectOption(this, 'actividad')">
+            <div class="option-icon">🏥</div>
+            <div class="option-label">Salud</div>
+            <div class="option-desc">Clínica, farmacia, lab</div>
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-primary btn-full" id="btnStep1" onclick="nextStep()" disabled>Continuar →</button>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step-content" id="step2">
+        <h3 class="question-title">¿Cuántos trabajadores tenés?</h3>
+        <p class="question-subtitle">Incluí personal en planta, administrativo y operativo</p>
+        <div class="range-container">
+          <div class="range-value"><span id="empleadosValor">5</span> <span>empleados</span></div>
+          <input type="range" id="empleadosRange" min="1" max="200" value="5" oninput="updateEmpleados(this.value)">
+          <div class="range-labels"><span>1</span><span>50</span><span>100</span><span>150</span><span>200+</span></div>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="prevStep()">← Volver</button>
+          <button class="btn btn-primary" onclick="nextStep()">Continuar →</button>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step-content" id="step3">
+        <h3 class="question-title">¿Qué servicios necesitás?</h3>
+        <p class="question-subtitle">Seleccioná todos los que apliquen a tu establecimiento</p>
+        <div class="checkbox-grid">
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="hyseg" onchange="updateServicios()">
+            <div><span class="checkbox-text">Servicio de Higiene y Seguridad (H&S)</span><span class="checkbox-desc">Asesoría mensual, visitas de inspección, ART</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="medica" onchange="updateServicios()">
+            <div><span class="checkbox-text">Servicio de Medicina del Trabajo</span><span class="checkbox-desc">Exámenes de aptitud, control de ausentismo</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="ruido" onchange="updateServicios()">
+            <div><span class="checkbox-text">Medición de Ruido Ocupacional</span><span class="checkbox-desc">Dosimetrías, mapa de ruido (Res. SRT 85/12)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="iluminacion" onchange="updateServicios()">
+            <div><span class="checkbox-text">Medición de Iluminación</span><span class="checkbox-desc">Luxometría en puestos (Res. SRT 84/12)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="puestaatierra" onchange="updateServicios()">
+            <div><span class="checkbox-text">Puesta a Tierra y Continuidad</span><span class="checkbox-desc">Medición con telurímetro (Res. SRT 900/15)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="quimicos" onchange="updateServicios()">
+            <div><span class="checkbox-text">Muestreo de Contaminantes Químicos</span><span class="checkbox-desc">Material particulado, gases, vapores (Res. 861/15)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="evacuacion" onchange="updateServicios()">
+            <div><span class="checkbox-text">Plan de Evacuación y Autoprotección</span><span class="checkbox-desc">Planos CAD, simulacro, capacitación (Dec. 351/79)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="matriz" onchange="updateServicios()">
+            <div><span class="checkbox-text">Matriz de Riesgos (MIPER / IPER)</span><span class="checkbox-desc">Estudio por puesto, peligros y controles</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="ergonomia" onchange="updateServicios()">
+            <div><span class="checkbox-text">Estudio de Ergonomía Laboral</span><span class="checkbox-desc">Evaluación REBA/OWAS/NIOSH (Res. 886/15)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="capacitacion" onchange="updateServicios()">
+            <div><span class="checkbox-text">Plan Anual de Capacitación</span><span class="checkbox-desc">EPP, ergonomía, evacuación, primeros auxilios</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="rgrl" onchange="updateServicios()">
+            <div><span class="checkbox-text">Relevamiento General de Riesgos (RGRL)</span><span class="checkbox-desc">Declaración jurada anual ante ART (Res. 463/09)</span></div>
+          </label>
+          <label class="checkbox-item" onclick="toggleCheckbox(this)">
+            <input type="checkbox" value="calderas" onchange="updateServicios()">
+            <div><span class="checkbox-text">Habilitación de Calderas y Recipientes</span><span class="checkbox-desc">Prueba hidráulica, espesores, válvulas</span></div>
+          </label>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="prevStep()">← Volver</button>
+          <button class="btn btn-primary" id="btnStep3" onclick="nextStep()" disabled>Continuar →</button>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step-content" id="step4">
+        <h3 class="question-title">¿Dónde está ubicada tu empresa?</h3>
+        <p class="question-subtitle">La zona afecta los costos por desplazamiento y factor regional</p>
+        <div class="option-grid">
+          <div class="option-card" data-value="neuquen_capital" onclick="selectOption(this, 'zona')">
+            <div class="option-icon">🏔️</div>
+            <div class="option-label">Neuquén Capital</div>
+            <div class="option-desc">Sin adicional</div>
+          </div>
+          <div class="option-card" data-value="vaca_muerta" onclick="selectOption(this, 'zona')">
+            <div class="option-icon">🛢️</div>
+            <div class="option-label">Vaca Muerta / Patagonia</div>
+            <div class="option-desc">+40% zona desfavorable</div>
+          </div>
+          <div class="option-card" data-value="rio_negro" onclick="selectOption(this, 'zona')">
+            <div class="option-icon">🌲</div>
+            <div class="option-label">Río Negro / Mendoza</div>
+            <div class="option-desc">+25% factor regional</div>
+          </div>
+          <div class="option-card" data-value="caba" onclick="selectOption(this, 'zona')">
+            <div class="option-icon">🏙️</div>
+            <div class="option-label">CABA / GBA</div>
+            <div class="option-desc">Tarifa estándar</div>
+          </div>
+          <div class="option-card" data-value="interior" onclick="selectOption(this, 'zona')">
+            <div class="option-icon">🚗</div>
+            <div class="option-label">Interior del país</div>
+            <div class="option-desc">Consultar desplazamiento</div>
+          </div>
+        </div>
+        <div class="nav-buttons">
+          <button class="btn btn-secondary" onclick="prevStep()">← Volver</button>
+          <button class="btn btn-primary" id="btnStep4" onclick="calcularPresupuesto()" disabled>💰 Calcular Presupuesto</button>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step-content" id="step5">
+        <div class="result-card">
+          <div class="result-badge">⚠️ 0% de cumplimiento detectado</div>
+          <div style="font-size: 14px; color: #666; margin-bottom: 4px;">Inversión anual estimada</div>
+          <div class="result-amount" id="resultAmount">$0 <span>ARS/año</span></div>
+          <div class="result-detail" id="resultDetail">
+            Basado en tu actividad, personal y servicios seleccionados. Incluye asesoría continua + estudios técnicos anuales.
+          </div>
+          <div class="summary-tags" id="summaryTags"></div>
+          <div class="breakdown-list" id="breakdownList"></div>
+        </div>
+
+        <div class="urgency-box">
+          <span class="icon">⏰</span>
+          <div>
+            <h4>¡Tenés obligaciones próximas a vencer!</h4>
+            <p>El RGRL vence en septiembre, las mediciones de puesta a tierra en octubre. No esperes a la multa.</p>
+          </div>
+        </div>
+
+        <div class="testimonial">
+          "Contratamos el servicio integral y en 30 días pasamos del 0% al 100% de compliance. La auditoría de la ART salió impecable."
+          <div class="testimonial-author">— Gerente de Operaciones, Metalúrgica del Neuquén</div>
+        </div>
+
+        <h3 style="font-size: 18px; color: var(--text); margin-bottom: 16px; text-align: center;">📋 Recibí el presupuesto detallado en tu email</h3>
+
+        <form id="leadForm" onsubmit="enviarLead(event)">
+          <div class="form-group">
+            <label>Nombre y Apellido *</label>
+            <input type="text" id="nombre" placeholder="Ej: Juan Pérez" required>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="email" placeholder="juan@empresa.com" required>
+            </div>
+            <div class="form-group">
+              <label>Teléfono *</label>
+              <input type="tel" id="telefono" placeholder="299 123 4567" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Razón Social / Empresa</label>
+            <input type="text" id="empresa" placeholder="Nombre de la empresa">
+          </div>
+          <div class="form-group">
+            <label>¿Querés agregar algo?</label>
+            <textarea id="mensaje" rows="3" placeholder="Detalles adicionales, consultas específicas..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" style="margin-top: 8px;">📩 Enviar Presupuesto Detallado</button>
+        </form>
+
+        <div class="trust-badges">
+          <div class="trust-badge"><span class="icon">🛡️</span><span>Profesional Matriculado PA 446</span></div>
+          <div class="trust-badge"><span class="icon">⚡</span><span>Respuesta en 24hs</span></div>
+          <div class="trust-badge"><span class="icon">🔒</span><span>Datos 100% seguros</span></div>
+        </div>
+      </div>
+
+      <!-- Success -->
+      <div class="step-content" id="stepSuccess">
+        <div style="text-align: center; padding: 40px 20px;">
+          <div style="font-size: 64px; margin-bottom: 16px;">✅</div>
+          <h2 style="font-size: 24px; color: var(--primary); margin-bottom: 12px;">¡Presupuesto enviado!</h2>
+          <p style="font-size: 16px; color: #555; margin-bottom: 24px;">Te contactaremos en menos de 24 horas.<br>Revisá tu correo (incluyendo spam).</p>
+          <div style="background: var(--light); border-radius: 12px; padding: 20px; margin-bottom: 24px; text-align: left;">
+            <p style="font-size: 14px; color: #666; margin: 0 0 8px;"><strong>Próximos pasos:</strong></p>
+            <ol style="font-size: 14px; color: #555; margin: 0; padding-left: 18px; line-height: 1.8;">
+              <li>Revisión técnica de tu caso por el Lic. Paredes</li>
+              <li>Propuesta formal ajustada a tu realidad</li>
+              <li>Inspección in-situ sin cargo (opcional)</li>
+              <li>Inicio de servicio en 48hs si aprobás</li>
+            </ol>
+          </div>
+          <button class="btn btn-secondary" onclick="location.reload()">🔄 Nueva Cotización</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FLYER TRUST SECTION ===== -->
+<section class="trust-section">
+  <h2>¿Por qué elegir AVAL HSE?</h2>
+  <p>Experiencia comprobada en la industria del petróleo y gas de Vaca Muerta</p>
+  <img src="./aval-hse-flyer.png" alt="AVAL HSE - Servicios de Seguridad e Higiene Laboral" class="flyer-img" loading="lazy">
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <p class="contact-line">📞 <strong>299 460 3071</strong> &nbsp;|&nbsp; ✉️ victor.paredes@avalhse.com</p>
+  <p>Aval HSE · Seguridad · Higiene · Medio Ambiente · Neuquén, Argentina</p>
+  <p style="font-size: 12px; margin-top: 8px; opacity: 0.4;">Lic. Víctor Javier Paredes · Matrícula Profesional PA 446 · Colegio de Ingenieros del Neuquén</p>
+</footer>
+
+<script>
+  let currentStep = 1;
+  const totalSteps = 5;
+  let data = { actividad: null, empleados: 5, servicios: [], zona: null };
+
+  const tarifasHS = {
+    '1-10': 180000, '11-25': 240000, '26-50': 320000,
+    '51-100': 480000, '101-200': 720000
+  };
+  const tarifasEstudios = {
+    'ruido': { base: 18000, label: 'Medición de Ruido', unit: 'por punto' },
+    'iluminacion': { base: 12000, label: 'Luxometría', unit: 'por punto' },
+    'puestaatierra': { base: 30000, label: 'Puesta a Tierra', unit: 'por jabalina' },
+    'quimicos': { base: 25000, label: 'Muestreo Químico', unit: 'por punto' },
+    'evacuacion': { base: 150000, label: 'Plan de Evacuación', unit: 'único' },
+    'matriz': { base: 8000, label: 'Matriz de Riesgos', unit: 'por puesto' },
+    'ergonomia': { base: 10000, label: 'Ergonomía', unit: 'por puesto' },
+    'capacitacion': { base: 5000, label: 'Capacitación', unit: 'por empleado/año' },
+    'rgrl': { base: 45000, label: 'RGRL', unit: 'anual' },
+    'calderas': { base: 60000, label: 'Calderas', unit: 'por equipo' },
+    'medica': { base: 15000, label: 'Medicina Laboral', unit: 'por empleado/año' }
+  };
+  const factoresZona = {
+    'neuquen_capital': 1.0, 'vaca_muerta': 1.4, 'rio_negro': 1.25,
+    'caba': 1.0, 'interior': 1.15
+  };
+  const factoresActividad = {
+    'comercio': 0.85, 'servicios': 0.90, 'salud': 1.0,
+    'industria': 1.15, 'construccion': 1.25, 'oilgas': 1.35
+  };
+
+  function selectOption(el, field) {
+    const parent = el.parentElement;
+    parent.querySelectorAll('.option-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    data[field] = el.dataset.value;
+    updateButtons();
+  }
+  function updateEmpleados(val) {
+    data.empleados = parseInt(val);
+    document.getElementById('empleadosValor').textContent = val;
+  }
+  function toggleCheckbox(el) {
+    const checkbox = el.querySelector('input[type="checkbox"]');
+    checkbox.checked = !checkbox.checked;
+    el.classList.toggle('selected', checkbox.checked);
+    updateServicios();
+  }
+  function updateServicios() {
+    const checkboxes = document.querySelectorAll('#step3 input[type="checkbox"]:checked');
+    data.servicios = Array.from(checkboxes).map(cb => cb.value);
+    updateButtons();
+  }
+  function updateButtons() {
+    document.getElementById('btnStep1').disabled = !data.actividad;
+    document.getElementById('btnStep3').disabled = data.servicios.length === 0;
+    document.getElementById('btnStep4').disabled = !data.zona;
+  }
+  function updateProgress() {
+    const width = ((currentStep - 1) / (totalSteps - 1)) * 80 + 10;
+    document.getElementById('progressFill').style.width = width + '%';
+    document.querySelectorAll('.step-dot').forEach((dot, idx) => {
+      const stepNum = idx + 1;
+      dot.classList.remove('active', 'completed');
+      const label = dot.querySelector('.step-label').textContent;
+      if (stepNum < currentStep) {
+        dot.classList.add('completed');
+        dot.innerHTML = '✓<span class="step-label">' + label + '</span>';
+      } else if (stepNum === currentStep) {
+        dot.classList.add('active');
+        dot.innerHTML = stepNum + '<span class="step-label">' + label + '</span>';
+      } else {
+        dot.innerHTML = stepNum + '<span class="step-label">' + label + '</span>';
+      }
+    });
+  }
+  function nextStep() {
+    if (currentStep < totalSteps) {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      currentStep++;
+      document.getElementById('step' + currentStep).classList.add('active');
+      updateProgress();
+    }
+  }
+  function prevStep() {
+    if (currentStep > 1) {
+      document.getElementById('step' + currentStep).classList.remove('active');
+      currentStep--;
+      document.getElementById('step' + currentStep).classList.add('active');
+      updateProgress();
+    }
+  }
+  function getTramoEmpleados(n) {
+    if (n <= 10) return '1-10';
+    if (n <= 25) return '11-25';
+    if (n <= 50) return '26-50';
+    if (n <= 100) return '51-100';
+    return '101-200';
+  }
+  function getPuntosMuestreo(actividad, empleados) {
+    const base = Math.ceil(empleados / 10);
+    const mult = { 'comercio': 1, 'servicios': 1.2, 'salud': 1.5, 'industria': 2, 'construccion': 2.5, 'oilgas': 3 };
+    return Math.max(3, Math.ceil(base * (mult[actividad] || 1)));
+  }
+  function calcularPresupuesto() {
+    if (!data.zona) return;
+    const factorZona = factoresZona[data.zona] || 1;
+    const factorAct = factoresActividad[data.actividad] || 1;
+    const tramo = getTramoEmpleados(data.empleados);
+    const puntos = getPuntosMuestreo(data.actividad, data.empleados);
+    let totalAnual = 0;
+    let detalle = [];
+    const tieneHySeg = data.servicios.includes('hyseg');
+    const serviciosRequierenHySeg = data.servicios.some(s => ['ruido','iluminacion','puestaatierra','quimicos','matriz','ergonomia'].includes(s));
+    if (tieneHySeg || serviciosRequierenHySeg) {
+      const tarifaHS = tarifasHS[tramo] || tarifasHS['101-200'];
+      const hsAnual = tarifaHS * 12 * factorZona * factorAct;
+      totalAnual += hsAnual;
+      detalle.push({ concepto: 'Servicio H&S Mensual (' + data.empleados + ' trab.)', monto: hsAnual });
+    }
+    data.servicios.forEach(serv => {
+      if (serv === 'hyseg') return;
+      const tarifa = tarifasEstudios[serv];
+      if (!tarifa) return;
+      let cantidad = 1, monto = 0;
+      switch(serv) {
+        case 'ruido': case 'iluminacion': case 'quimicos':
+          cantidad = puntos;
+          monto = tarifa.base * cantidad * factorZona;
+          break;
+        case 'puestaatierra':
+          cantidad = Math.max(2, Math.ceil(puntos / 3));
+          monto = tarifa.base * cantidad * factorZona;
+          break;
+        case 'matriz': case 'ergonomia': case 'capacitacion': case 'medica':
+          cantidad = data.empleados;
+          monto = tarifa.base * cantidad * factorZona;
+          break;
+        case 'calderas':
+          cantidad = Math.max(1, Math.ceil(data.empleados / 30));
+          monto = tarifa.base * cantidad * factorZona;
+          break;
+        default:
+          monto = tarifa.base * factorZona;
+      }
+      totalAnual += monto;
+      detalle.push({ concepto: tarifa.label + (cantidad > 1 ? ' (' + cantidad + ' ' + tarifa.unit + ')' : ''), monto: monto });
+    });
+    if (!tieneHySeg && data.servicios.length > 0 && detalle.length === 0) {
+      const tarifaHS = tarifasHS[tramo] || tarifasHS['101-200'];
+      const hsAnual = tarifaHS * 12 * factorZona * factorAct;
+      totalAnual += hsAnual;
+      detalle.push({ concepto: 'Servicio H&S Mensual (requerido por norma)', monto: hsAnual });
+    }
+    const formatter = new Intl.NumberFormat('es-AR');
+    document.getElementById('resultAmount').innerHTML = '$' + formatter.format(Math.round(totalAnual)) + ' <span>ARS/año</span>';
+    const actividadLabels = { 'comercio': 'Comercio', 'servicios': 'Servicios', 'industria': 'Industria', 'construccion': 'Construcción', 'oilgas': 'Oil & Gas', 'salud': 'Salud' };
+    const zonaLabels = { 'neuquen_capital': 'Neuquén Capital', 'vaca_muerta': 'Vaca Muerta', 'rio_negro': 'Río Negro/Mendoza', 'caba': 'CABA/GBA', 'interior': 'Interior' };
+    document.getElementById('summaryTags').innerHTML = `
+      <span class="tag">${actividadLabels[data.actividad]}</span>
+      <span class="tag">${data.empleados} empleados</span>
+      <span class="tag">${zonaLabels[data.zona]}</span>
+      <span class="tag">${data.servicios.length} servicios</span>`;
+    let breakdownHTML = '';
+    detalle.forEach(item => {
+      breakdownHTML += `<div class="breakdown-item"><span>${item.concepto}</span><span><strong>$${formatter.format(Math.round(item.monto))}</strong></span></div>`;
+    });
+    breakdownHTML += `<div class="breakdown-item total"><span>TOTAL ANUAL ESTIMADO</span><span>$${formatter.format(Math.round(totalAnual))}</span></div>`;
+    document.getElementById('breakdownList').innerHTML = breakdownHTML;
+    nextStep();
+  }
+  function enviarLead(e) {
+    e.preventDefault();
+    document.getElementById('step5').classList.remove('active');
+    document.getElementById('stepSuccess').classList.add('active');
+    document.getElementById('progressFill').style.width = '100%';
+    document.querySelectorAll('.step-dot').forEach(dot => {
+      dot.classList.add('completed');
+      dot.innerHTML = '✓';
+    });
+  }
+  updateProgress();
+</script>
+
+</body>
+</html>
